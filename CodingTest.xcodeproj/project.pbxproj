@@ -370,7 +370,7 @@
 			path = codeup1099;
 			sourceTree = "<group>";
 		};
-		3B2DE3FA24ADE18600536E02 = {
+		3B1E85A024B6E3D2005AE9EB /* codeup */ = {
 			isa = PBXGroup;
 			children = (
 				3B1E83EC24AF549E005AE9EB /* codeup1029 */,
@@ -413,6 +413,22 @@
 				3B1E858324B0C9E3005AE9EB /* codeup1097 */,
 				3B1E858E24B0CD2D005AE9EB /* codeup1098 */,
 				3B1E859924B0D6A2005AE9EB /* codeup1099 */,
+			);
+			path = codeup;
+			sourceTree = "<group>";
+		};
+		3B1E85A124B6E3EA005AE9EB /* boj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = boj;
+			sourceTree = "<group>";
+		};
+		3B2DE3FA24ADE18600536E02 = {
+			isa = PBXGroup;
+			children = (
+				3B1E85A124B6E3EA005AE9EB /* boj */,
+				3B1E85A024B6E3D2005AE9EB /* codeup */,
 				3B2DE40424ADE18600536E02 /* Products */,
 			);
 			sourceTree = "<group>";
