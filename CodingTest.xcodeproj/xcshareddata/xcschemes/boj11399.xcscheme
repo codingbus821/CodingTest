@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B1E83DD24AF14C7005AE9EB"
-               BuildableName = "boj1010"
-               BlueprintName = "boj1010"
+               BlueprintIdentifier = "3B1E85A524B6E44A005AE9EB"
+               BuildableName = "boj11399"
+               BlueprintName = "boj11399"
                ReferencedContainer = "container:CodingTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B1E83DD24AF14C7005AE9EB"
-            BuildableName = "boj1010"
-            BlueprintName = "boj1010"
+            BlueprintIdentifier = "3B1E85A524B6E44A005AE9EB"
+            BuildableName = "boj11399"
+            BlueprintName = "boj11399"
             ReferencedContainer = "container:CodingTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B1E83DD24AF14C7005AE9EB"
-            BuildableName = "boj1010"
-            BlueprintName = "boj1010"
+            BlueprintIdentifier = "3B1E85A524B6E44A005AE9EB"
+            BuildableName = "boj11399"
+            BlueprintName = "boj11399"
             ReferencedContainer = "container:CodingTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
