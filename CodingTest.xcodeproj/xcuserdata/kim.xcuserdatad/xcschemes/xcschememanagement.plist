@@ -4,90 +4,50 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CodingTest.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>boj10610.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
-		</dict>
-		<key>boj10809.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
-		</dict>
-		<key>boj11047.xcscheme_^#shared#^_</key>
+		<key>boj1011.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>boj11399.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>boj1152.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>12</integer>
-		</dict>
-		<key>boj1157.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
-		</dict>
-		<key>boj11654.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
-		<key>boj11720.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
-		<key>boj1316.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>16</integer>
-		</dict>
-		<key>boj1931.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>boj2217.xcscheme_^#shared#^_</key>
+		<key>boj10250.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>boj2675.xcscheme_^#shared#^_</key>
+		<key>boj1062.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>4</integer>
 		</dict>
-		<key>boj2908.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>13</integer>
-		</dict>
-		<key>boj2941.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>15</integer>
-		</dict>
-		<key>boj5585.xcscheme_^#shared#^_</key>
+		<key>boj1193.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>boj5622.xcscheme_^#shared#^_</key>
+		<key>boj2606.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>7</integer>
+		</dict>
+		<key>boj2667.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>boj2775.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>boj2869.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>boj9935.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>codeup1026.xcscheme_^#shared#^_</key>
 		<dict>
