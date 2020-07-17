@@ -9,11 +9,15 @@
 #include <iostream>
 #include <tuple>
 #include <vector>
+#include <cstring>
+#include <algorithm>
+#include <queue>
 
 using namespace std;
 
 int N,M;
-int arr[51][51]={0,};
+int dist[51][51];
+bool visited[51][51];
 int direct[8][2]={
     {1,2},
     {-1,2},
@@ -25,38 +29,73 @@ int direct[8][2]={
     {-1,-2}
 };
 vector<tuple<int,int,int>> v;
-int ans = -1;
+int ans = 0;
 
-void DFS(int idx, int h, int w, int cnt){
+void BFS(){
     
-    int dh,dw;
+    //    cout << "size = " << v.size();
     
-    if(idx > (v.size()-1))
-        return;
-    
-    for(int i=0;i<8;i++){
+    for(int i=(v.size()-1);i>0;i--){
         
-        dh = h + direct[i][0];
-        dw = w + direct[i][1];
+        queue<pair<int, int>> q;
         
+        memset(dist,-1,sizeof(dist));
+        memset(visited,false,sizeof(visited));
         
+        q.push(make_pair(get<1>(v[i]), get<2>(v[i])));
+        dist[get<1>(v[i])][get<2>(v[i])] = 0;
+        visited[get<1>(v[i])][get<2>(v[i])] = true;
         
-        if(dh >=0 && dh<N && dw>=0 && dw<M){
-            arr[h][w] = 0;
-            arr[dh][dw] = 1;
+        while(!q.empty()){
+            int h=q.front().first;
+            int w=q.front().second;
+            q.pop();
             
-            DFS(idx+1, dh, dw, cnt+1);
+//            cout << "h=" << h << " w=" << w << "\n";
             
-            arr[h][w] = 1;
-            arr[dh][dw] = 0;
+            if(h==get<1>(v[0]) && w == get<2>(v[0])){
+                if(i==1){
+                    if(dist[h][w]%get<0>(v[i]) != 0){
+                        ans = ans + (dist[h][w]/get<0>(v[i])) + 1;
+                    }else{
+                        ans = ans + (dist[h][w]/get<0>(v[i]));
+                    }
+//                    cout << dist[h][w] << "\n";
+                    break;
+                }
+                else if(dist[h][w] % get<0>(v[i]) == 0){
+                    
+                    ans = ans + (dist[h][w]/get<0>(v[i]));
+//                    cout << dist[h][w] << "\n";
+                    break;
+                }else{
+                    memset(visited,false,sizeof(visited));
+                }
+            }
+            
+            for(int i=0;i<8;i++){
+                int dh,dw;
+                
+                dh = h + direct[i][0];
+                dw = w + direct[i][1];
+                
+                if(dh >= 0 && dh < N && dw >= 0 && dw < M && visited[dh][dw] == false){
+                    q.push(make_pair(dh, dw));
+                    dist[dh][dw] = dist[h][w] + 1;
+                    visited[dh][dw] = true;
+                }
+            }
         }
+        
+        
     }
-    
-    ans = max(ans,cnt);
-    
 }
 
 int main(int argc, const char * argv[]) {
+    
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ios_base::sync_with_stdio(false);
     
     string str;
     
@@ -69,15 +108,19 @@ int main(int argc, const char * argv[]) {
                 continue;
             else{
                 v.push_back(make_tuple(str[j] - '0',i,j));
-                arr[i][j] = str[j] - '0';
             }
         }
     }
     
-    DFS(0,get<1>(v[0]),get<2>(v[0]),1);
+    sort(v.begin(),v.end());
+    
+    //    for(int i=0;i<v.size();i++){
+    //        cout << get<0>(v[i]) << get<1>(v[i]) << get<2>(v[i]) << "\n";
+    //    }
+    
+    BFS();
     
     cout << ans;
-    
     
     return 0;
 }
