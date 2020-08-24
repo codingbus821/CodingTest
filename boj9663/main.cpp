@@ -1,14 +1,15 @@
 //
 //  main.cpp
-//  boj7568
+//  boj9663
 //
-//  Created by 김병수 on 2020/07/20.
+//  Created by 김병수 on 2020/08/24.
 //  Copyright © 2020 coconut. All rights reserved.
 //
 
 #include <iostream>
+#define MAX 15+1
 
-using namespace std;
+int arr[MAX][MAX];
 
 int main(int argc, const char * argv[]) {
     
