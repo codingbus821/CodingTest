@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
     
     //ababcdcdababcdcd
     //aabbaccc
-    string s = "ababcdcdababcdcd";
+    string s = "aabbaccc";
     
     int answer=1000;
     
