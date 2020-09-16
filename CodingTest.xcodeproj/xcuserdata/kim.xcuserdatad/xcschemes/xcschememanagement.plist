@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>boj2805.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>boj5052.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
 		<key>codeup1026.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -214,21 +204,6 @@
 			<key>orderHint</key>
 			<integer>19</integer>
 		</dict>
-		<key>q1.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>q2.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>q3.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
 		<key>temp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -258,6 +233,46 @@
 			<true/>
 		</dict>
 		<key>3B7C859824FA875500249ADC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B993859250CC35000D0D8D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B993864250DA94100D0D8D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B99386F250DB02A00D0D8D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B99387A250DB5AC00D0D8D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B993885250DC38700D0D8D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B993890250DC39600D0D8D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BAD4D75250C88B100CF1DEE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BAD4D80250CA6C100CF1DEE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
