@@ -27,7 +27,7 @@ void dijkstra(int start){ // start노드를 기준으로 하는 다익스트라
         int distance = -pq.top().first; // 현재 노드까지 가중치의 합
         pq.pop();
         
-        if(dist[current] < distance) continue;
+        if(dist[current] < distance) continue; // 현재까지 구한 최단경로보다 더 멀면 continue
         for(int i=0;i<arr[current].size();i++){
             int next = arr[current][i].first; // 연결된 다음 노드
             int nextdistance = distance + arr[current][i].second; // 연결된 다음 노드까지 가중치의 합.
