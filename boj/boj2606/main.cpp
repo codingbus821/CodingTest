@@ -1,51 +1,84 @@
 //
 //  main.cpp
-//  boj1193
+//  boj2606
 //
-//  Created by 김병수 on 2020/07/13.
-//  Copyright © 2020 coconut. All rights reserved.
+//  Created by 김병수 on 2024/06/23.
+//  Copyright © 2024 coconut. All rights reserved.
 //
 
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
-int arr[101][101]={0,};
-int virused[101]={0,};
-int ans=0;
+typedef struct st{
+    int node;
+    struct st *next;
+}NODE;
 
-void DFS(int a,int nodenum){
+NODE head[111];
+NODE pool[11111];
+int cnt;
+int ans = 0;
+bool visited[111];
+
+void init(){
+    for(int i=0;i<111;i++){
+        head[i].node = 0;
+        head[i].next = 0;
+        visited[i] = 0;
+        cnt = 0;
+    }
+}
+
+void make(int f, int s){
+    NODE *nd = &pool[cnt++];
+    nd->node = s;
+    nd->next = head[f].next;
+    head[f].next = nd;
+}
+
+void bfs(){
+    queue<int> q;
     
-    virused[a] = 1;
-    ans++;
+    q.push(1);
+    visited[1] = true;
     
-    for(int i=1;i<=nodenum;i++)
-    {
-        if(virused[i] == 0 && arr[a][i] == 1){
-            DFS(i,nodenum);
+    while (!q.empty()){
+        int tmp = q.front();
+        q.pop();
+        
+        for(NODE *p = head[tmp].next;p;p = p->next){
+            if(visited[p->node] == false){
+                visited[p->node] = true;
+                q.push(p->node);
+                ans++;
+            }
         }
     }
     
-    return;
 }
 
-int main(int argc, const char * argv[]) {
+int c_num, e_num;
+
+int main() {
     
-    int a,b;
-    int x,y;
+    int f,s;
     
-    cin >> a >> b;
+    cin >> c_num >> e_num;
     
-    for(int i=0;i<b;i++){
-        cin >> x >> y;
-        
-        arr[x][y] = 1;
-        arr[y][x] = 1;
+    init();
+    
+    for(int i=0;i<e_num;i++){
+        cin >> f >> s;
+
+        make(f,s);
+        make(s,f);
     }
+//    cout << "hi";
+    bfs();
     
-    DFS(1,a);
-    
-    cout << --ans;
+    cout << ans;
     
     return 0;
 }
