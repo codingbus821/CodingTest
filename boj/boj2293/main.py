@@ -1,23 +1,13 @@
 n, k = map(int, input().split())
 ret = 0
-n_list = []
+n_list = [int(input()) for _ in range(n)]
 
-for _ in range(n):
-    n_list.append(int(input()))
+dp = [0 for _ in range(k+1)]
 
-def dfs(sum, ex):
-    global k, ret, n_list
-    if sum > k:
-        return
-    if sum == k:
-        ret += 1
-        return
-    for i in n_list:
-        if i >= ex:
-            print(sum, i)
-            dfs(sum+i, i)
+dp[0] = 1
 
 for i in n_list:
-    dfs(i, i)
+    for j in range(i, k+1):
+        dp[j] = dp[j] + dp[j-i]
 
-print(ret)
+print(dp[-1])
