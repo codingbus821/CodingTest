@@ -40,14 +40,14 @@ def find_max():
 for i in range(len(board)):
     for j in range(len(board[i])):
         find_max()
-        if j <= len(board)-2:
-            tmp = board[i][j]
-            board[i][j] = board[i][j+1]
-            board[i][j+1] = tmp
-            find_max()
-            tmp = board[i][j+1]
-            board[i][j+1] = board[i][j]
-            board[i][j] = tmp
+        # if j <= len(board)-2:
+        #     tmp = board[i][j]
+        #     board[i][j] = board[i][j+1]
+        #     board[i][j+1] = tmp
+        #     find_max()
+        #     tmp = board[i][j+1]
+        #     board[i][j+1] = board[i][j]
+        #     board[i][j] = tmp
         if j >= 1:
             tmp = board[i][j]
             board[i][j] = board[i][j-1]
@@ -64,13 +64,13 @@ for i in range(len(board)):
             tmp = board[i-1][j]
             board[i-1][j] = board[i][j]
             board[i][j] = tmp
-        if i <= len(board)-2:
-            tmp = board[i][j]
-            board[i][j] = board[i+1][j]
-            board[i+1][j] = tmp
-            find_max()
-            tmp = board[i+1][j]
-            board[i+1][j] = board[i][j]
-            board[i][j] = tmp
+        # if i <= len(board)-2:
+        #     tmp = board[i][j]
+        #     board[i][j] = board[i+1][j]
+        #     board[i+1][j] = tmp
+        #     find_max()
+        #     tmp = board[i+1][j]
+        #     board[i+1][j] = board[i][j]
+        #     board[i][j] = tmp
 
 print(maxx)
