@@ -27,7 +27,7 @@ while dq:
     now = dq.popleft()
     # print(now)
     # print(dq)
-    if now[2] > 10:
+    if now[2] >= 10:
         print(-1)
         exit()
     for i in range(4):
@@ -35,24 +35,27 @@ while dq:
         newcoin2 = [now[1][0]+dy[i], now[1][1]+dx[i]]
         out = 0
         
-        if 0<=newcoin1[0]<N and 0<=newcoin2[0]<N and 0<=newcoin1[1]<M and 0<=newcoin2[1]<M:
-            if board[newcoin1[0]][newcoin1[1]] == 2 and board[newcoin2[0]][newcoin2[1]] == 2:
-                continue
-            if board[newcoin1[0]][newcoin1[1]] == 2:
-                newcoin1 = [now[0][0], now[0][1]]
-            if board[newcoin2[0]][newcoin2[1]] == 2:
-                newcoin2 = [now[1][0], now[1][1]]
-        
         if newcoin1[0]<0 or newcoin1[0]>=N or newcoin1[1] <0 or newcoin1[1]>=M:
             out+=1
         if newcoin2[0]<0 or newcoin2[0]>=N or newcoin2[1] <0 or newcoin2[1]>=M:
             out+=1
+        
         if out == 2:
-            continue    
+            continue
         if out == 1:
-            print(now[2])
+            print(now[2]+1)
             exit()
-        # print(newcoin1, newcoin2, out)
+
+        if 0<=newcoin1[0]<N and 0<=newcoin1[1]<M:
+            if board[newcoin1[0]][newcoin1[1]] == 2:
+                newcoin1 = [now[0][0], now[0][1]]
+        
+        if 0<=newcoin2[0]<N and 0<=newcoin2[1]<M:
+            if board[newcoin2[0]][newcoin2[1]] == 2:
+                newcoin2 = [now[1][0], now[1][1]]
+
         if newcoin1[0] == newcoin2[0] and newcoin1[1] == newcoin2[1]:
             continue
         dq.append([newcoin1, newcoin2, now[2]+1])
+
+print(-1)
